@@ -1,0 +1,74 @@
+IF / ELSE
+
+	if [ condition-is-true ]
+
+	then
+		command 1
+		command n
+	else
+		command z
+	fi
+
+ELIF
+
+	Equivalente ao esle if em java. tambem precede uma condição (test)
+
+
+FOR LOOPS
+
+	#!/bin/bash
+
+	COLORS="red green blue"
+
+	for COLOR in $COLORS
+	do
+		echo "COLOR: $COLOR"
+	done
+
+
+Ex: Programa que modifica todos os ficheiros jpg no diretório para terem no nome a data 
+
+	#!/bin/bash
+
+	PICTURES=$(ls *jpg)
+	DATE=$(date +%F)
+
+	for PICTURE in PICTURES
+	do
+		echo "Renaming ${PICTURE} to ${DATE}-${PICTURE}"
+		mv ${PICTURE} ${DATE} - ${PICTURE}
+	done
+
+COMENTÁRIOS
+
+	começam sempre por # no inicio de uma linha
+
+	tudo que está a sua direita é ignorado
+
+ 
+
+ POSITIONAL PARAMETERS
+
+ 	$ script.sh parameter1 parameter2 parameterN
+
+ 	é a lista de argumentos na linha de comando.
+
+ 	Vai desde a posição 0 (que é o nome do programa) até a posição 9.
+
+ 	num ciclo for, para aceder a todos os parametros a partir da posicao 1:
+
+
+ 		- for $PARAMETER in $@
+ 			do ....
+
+
+ACCEPTING USER INPUT
+	
+	Para ler o que o utilizador está a inserir:
+
+		- read -p "PROMPT" VARIABLE-TO-STORE
+
+
+
+
+

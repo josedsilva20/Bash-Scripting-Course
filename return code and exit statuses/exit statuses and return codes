@@ -1,0 +1,47 @@
+VERIFICAR EXIT STATUS DE UM COMANDO
+
+	todo o comando returna um exit status que é um inteiro entre 0 e 255
+
+	0 significa sucesso e qualquer número diferente dela significa o oposto.
+
+	$? contém o exit code do comando que o precede.
+
+	podemos associar um erro a uma variável para podermos usar posteriormente no script
+
+		- ERROR_CODE=$?
+
+COMANDOS EM CADEIA
+
+	&& 
+
+		cp x j/h && echo "j"
+
+			echo apenas será executado se return code de cp for 0. Senão nem executa.
+
+			o seguinte só é executado se o anterior tiver sucesso.
+
+	||
+
+		só executa os seguintes se o primeiro falhar.
+
+	;
+
+		executa todos os comandos, independentemente do anterior ter sucesso ou não.
+
+		geralmente não se usa muito porque podemos simplesmente escrever os comandos na linha de comandos.
+
+
+MAKE DECISIONS BASED ON THE STATUSES
+	
+
+
+
+USAR EXIT STATUSES
+
+	Para retornar um erro basta apenas escrever "exit NUM" onde NUM é um inteiro [0, 255].
+
+	Se não indicarmos nenhum erro a ser retornado, então o último erro a ser cometido é que vai lançar o erro dito.
+
+	O código pára no exacto momento em que o comando exit é alcançado.
+
+	exit pode ser considerado um return mas em forma de erro (mais para um throw em java)
