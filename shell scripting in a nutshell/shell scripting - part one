@@ -1,0 +1,100 @@
+SCRIPT
+
+	Programa de linha de comando que contém uma série de comandos.
+
+	o codigo é executado por um interpretador e a shell é que executa-os linha a linha.
+
+	num shellscript podemos por tudo que podemos por numa linha de comando.
+
+	muito bom para automatizar tarefas
+
+
+O script começa com shabang (#!) seguido pelo nome do interpretador a usar:
+	
+	- #!/bin/bash
+
+		isto faz com que o nosso interpretador seja o bash.
+
+	mas podemos sempre escolher um interpretador diferente para correr scripts. Ex:
+
+		- #!/usr/bin/python
+
+VARIÁVEIS
+
+	São por convenção declaradas com maiúsculas, sem espaços entre o igual o nome e o valor:
+
+		- MY_SHELL="bash"
+
+	Nomes das variáveis não podem começar com numeros.
+
+	Para usar MY_SHELL em alguma parte do script:
+
+		- $MY_SHELL ou ${MY_SHELL}
+
+	Podemos atribuir o output dum comando a uma variável:
+
+		  SERVER_NAME=$(hostname)
+		  echo "You are running this script on $SERVER_NAME"
+
+
+COMANDOS
+
+	Podem ser executados com a seguinte sintaxe:
+
+		$(comando) ou `comando`
+
+
+TESTS
+
+	[ condition-to-test-for ]
+
+	ex:
+
+		[ -e /etc/passwd]
+
+
+	Os tests mais comuns são:
+
+		-d FILE	--->	True if file is a directory
+
+		-e FILE	--->	True if file exists
+
+		-f FILE	--->	True if file exists and is a regular file
+
+		-r FILE	--->	True if file is readable by you
+
+		-s FILE	--->	True if file exists and is not empty
+
+		-w FILE	--->	True if file is writable by you
+
+		-x FILE	--->	True if file is executable by you
+
+
+	STRING OPERATORS IN TESTS
+
+		-z STRING	--->	True if string is empty
+
+		-n STRING	--->	True if string is not empty
+
+		STRING1 = STRING2 --->	True if strings are equal
+
+		STRING1 != STRING2 --->	True if strings are different
+
+
+	NUMBER OPERATORS IN TESTS
+
+		arg1 -eq arg2	--->	True if arg1 is equal to arg2
+
+		arg1 -ne arg2	--->	True if arg1 is not equal to arg2
+
+		arg1 -lt arg2	--->	True if arg1 is less than arg2
+
+		arg1 -le arg2	--->	True if arg1 is less than or equal to arg2
+
+		arg1 -gt arg2	--->	True if arg1 is greater than arg2
+
+		arg1 -ge arg2	--->	True if arg1 is greater than or equal to arg2
+
+
+
+
