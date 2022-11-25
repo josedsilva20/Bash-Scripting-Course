@@ -31,7 +31,11 @@ COMANDOS EM CADEIA
 		geralmente não se usa muito porque podemos simplesmente escrever os comandos na linha de comandos.
 
 
-MAKE DECISIONS BASED ON THE STATUSES
+DESCOBRIR QUAIS OS TIPOS DE ERROS COM BASE NA MANPAGE
+
+	fazer man comando
+
+		pesquisar (usando /subcomando) e procurar o que ele diz.
 	
 
 

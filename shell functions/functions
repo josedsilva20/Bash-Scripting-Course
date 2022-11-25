@@ -1,0 +1,63 @@
+FUNCTIONS
+
+	Para declarar: 
+
+		- function functionName(){}
+				ou então
+		- functionName(){}
+
+	Para chamá-la:
+
+		- functionName
+
+FUNCOES COM PARAMETROS
+
+	Os parametros são os mesmos atribuídos pelo utilizador quando o a função é chamada.
+
+	ex: 
+		#!/bin/bash
+
+		function hello(){
+			echo "Hello $1"
+		}
+
+		hello Jason
+
+	Os parâmetros são identificados pelo $int e vem acompanhados quando a função é chamada.
+
+
+VARIABLE SCOPE
+
+	Por default as variáveis são globais (acessíveis em todo o código)
+
+	As variáveis precisam ser declaradas antes de serem usadas
+
+	Para declarar uma variável global, o nome da variável é precedido pela palavra "local":
+
+		- local LOCAL_VARIABLE=1
+
+	Boas práticas sugerem que se mantenha as variáveis locais dentro de uma função
+
+
+EXIT STATUS E RETURN CODE
+
+	Funções têm um exit status
+
+	Explicitamente, 
+
+		- return <RETURN_CODE>
+
+			onde RETURN_CODE é um inteiro entre 0 e 255
+
+			0 ---> sucesso na operação
+
+	Implicitamente, 
+
+		- o valor de retorno é o do ultimo comando executado na função. 
+
+
+	$? pode ser usado para saber qual é o exit status da função
+
+
+
+
