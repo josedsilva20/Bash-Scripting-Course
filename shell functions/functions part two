@@ -1,0 +1,7 @@
+ficheiro com backup chamaodo backup_file contém dados sobre como fazer backup de um file
+
+	nesse script tem um comando chamado basename $file que retorna o nome do file escolhido e não o seu nome absoluto (com todos os diretorios que o antecedem)
+
+
+	$$ nesse script significa PID, que é o proccess Id
+
